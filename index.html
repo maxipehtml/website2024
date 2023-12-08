@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maxi Pereira Blog</title>
+
+  <link rel="icon" href="/favicon-32x32.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <script src="particles.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div id="particles-js"></div>
+    <h1 class="main-title  animated-title">MAX PEREIRA</h1> 
+    <h2 class="sub-title ">3D Designer - Game Developer - Web Designer</h2>
+    <div class="social-icons d-flex justify-content-center">
+      <a href="https://www.linkedin.com/in/maximiliano-pereira-en-el-universo/" class="social-icon mx-2" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/maxipehtml" class="social-icon mx-2" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.artstation.com/zetatrip" class="social-icon mx-2" target="_blank"><i class="fab fa-artstation"></i></a>
+      <a href="https://sketchfab.com/zetas_en_el_universo" class="social-icon mx-2" target="_blank"><i class="fab fa-sketch"></i></a>
+      <a href="https://www.instagram.com/_max_pereira/" class="social-icon mx-2" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="portfolio">
+      <button class="filter-button2">
+        <a class="portfolio" href="https://www.youtube.com/watch?v=tynHBDv3kcg&list=PLuDO_5eKKNpHE2e_atGRM0gUK_844iotM" target="_blank">Portfolio Youtube</a>
+      </button>
+    </div>
+
+    <div class="filter">
+      <button class="filter-button" data-category="Games">Games</button>
+      <button class="filter-button" data-category="Tutorials">Tutorials</button>
+      <button class="filter-button" data-category="Visuals">Visuals</button>
+      <button class="filter-button" data-category="Web">Web</button>
+    </div>
+    
+    <div class="row" id="blog-container"></div> 
+     <a href="#" id="scrollToTopButton" class="scroll-to-top-button"><i class="fas fa-arrow-up"></i></a>
+  </div>
+  <footer class="footer">
+    <div class="container text-center">
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/maximiliano-pereira-en-el-universo/" class="social-icon" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/maxipehtml" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.artstation.com/zetatrip" class="social-icon" target="_blank"><i class="fab fa-artstation"></i></a>
+        <a href="https://sketchfab.com/zetas_en_el_universo" class="social-icon" target="_blank"><i class="fab fa-sketch"></i></a>
+        <a href="https://www.instagram.com/_max_pereira/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p class="footer-message">¡Sígueme en las redes sociales para estar al tanto de mis últimas actualizaciones y proyectos!</p>
+    </div>
+  </footer>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 80, // Ajusta la cantidad de partículas
+          density: {
+            enable: true,
+            value_area: 800 // Ajusta el área en el que se distribuyen las partículas
+          }
+        },
+        color: {
+          value: "#ffffff" // Ajusta el color de las partículas
+        },
+        shape: {
+          type: "circle", // Ajusta la forma de las partículas (círculo en este caso)
+          stroke: {
+            width: 0,
+            color: "#000000"
+          },
+          polygon: {
+            nb_sides: 4
+          }
+        },
+        opacity: {
+          value: 0.6, // Ajusta la opacidad de las partículas
+          random: true,
+          anim: {
+            enable: false,
+            speed: 1,
+            opacity_min: 0.1,
+            sync: false
+          }
+        },
+        size: {
+          value: 3, // Ajusta el tamaño de las partículas
+          random: true,
+          anim: {
+            enable: false,
+            speed: 80,
+            size_min: 0.1,
+            sync: false
+          }
+        },
+        line_linked: {
+          enable: true,
+          distance: 90, // Ajusta la distancia entre partículas vinculadas
+          color: "#ffffff", // Ajusta el color de las líneas entre partículas
+          opacity: 0.4, // Ajusta la opacidad de las líneas entre partículas
+          width: 1 // Ajusta el ancho de las líneas entre partículas
+        },
+        move: {
+          enable: true,
+          speed: 12, // Ajusta la velocidad de movimiento de las partículas
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: true,
+          attract: {
+            enable: true,
+            rotateX: 600,
+            rotateY: 1200
+          }
+        }
+      },
+    });
+  </script>
+  
+  <script src="app.js"></script>
+</body>
+</html>
