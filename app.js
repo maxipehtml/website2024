@@ -7,6 +7,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   filterButtons.forEach((button) => {
     button.addEventListener("click", function () {
+      // Quitar la clase 'selected' de todos los botones de filtro
+      filterButtons.forEach((btn) => {
+        btn.classList.remove("selected");
+      });
+
+      // Agregar la clase 'selected' al botón de filtro actual
+      button.classList.add("selected");
+
       selectedCategory = button.getAttribute("data-category");
       currentPage = 1;
       blogContainer.innerHTML = ""; // Limpiar el contenedor antes de cargar nuevas publicaciones
