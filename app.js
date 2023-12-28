@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const filterButtons = document.querySelectorAll(".filter-button");
   let currentPage = 1;
   let isLoading = false;
-  let selectedCategory = "Games"; // Cambia a la categoría deseada como predeterminada
+  let selectedCategory = "3D"; // Cambia a la categoría deseada como predeterminada
 
   filterButtons.forEach((button) => {
     button.addEventListener("click", function () {
@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Error fetching data:", error);
       });
   }
+
   function renderPosts(posts) {
     posts.forEach((post) => {
       const postElement = document.createElement("div");
@@ -76,6 +77,15 @@ document.addEventListener("DOMContentLoaded", function () {
       if (post.image) {
         postContent += `
           <img src="${post.image}" alt="Imagen de la publicación">
+        `;
+      }
+
+      // Agregar el modelo 3D de Sketchfab si existe
+      if (post.sketchfabEmbed) {
+        postContent += `
+          <div class="sketchfab-embed-wrapper">
+            ${post.sketchfabEmbed}
+          </div>
         `;
       }
 
